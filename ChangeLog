@@ -1,3 +1,8 @@
 2015-12-15 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 
-
+	* First state of the extension after kickstarting via extension_builder
+	* Added flexform for the plugin and retrieved the settings inside of the
+	  controller
+	* Added the first draft of calculation the date or time towards the target
+	  date
+	* Started with layouting the views
