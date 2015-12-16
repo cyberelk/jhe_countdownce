@@ -1,0 +1,99 @@
+<T3DataStructure>
+    <meta type="array">
+        <langChildren>0</langChildren>
+        <langDisable>1</langDisable>
+    </meta>
+    <ROOT>
+        <type>array</type>
+        <el>
+            <settings.header>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Überschrift</label>
+                    <config>
+                        <type>input</type>
+                        <size>50</size>
+                        <max>255</max>
+                        <eval>trim</eval>
+                    </config>
+                </TCEforms>
+            </settings.header>
+            <settings.subheader>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Unterüberschrift</label>
+                    <config>
+                        <type>input</type>
+                        <size>50</size>
+                        <max>255</max>
+                        <eval>trim</eval>
+                    </config>
+                </TCEforms>
+            </settings.subheader>
+            <settings.text>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Text</label>
+                    <config>
+                        <type>text</type>
+                        <cols>24</cols>
+                        <rows>3</rows>
+                    </config>
+                    <defaultExtras>richtext[*]:rte_transform[mode=ts_css]</defaultExtras>
+                </TCEforms>
+            </settings.text>
+            <settings.countTo>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Contdown auf...</label>
+                    <onChange>reload</onChange>
+                    <config>
+                        <type>select</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0"></numIndex>
+                                <numIndex index="1"></numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">Datum</numIndex>
+                                <numIndex index="1">date</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">Datum &amp; Uhrzeit</numIndex>
+                                <numIndex index="1">datetime</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.countTo>
+            <settings.targetdate>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Zieldatum</label>
+                    <displayCond>FIELD:settings.countTo:=:date</displayCond>
+                    <config>
+                        <type>input</type>
+                        <size>10</size>
+                        <max>10</max>
+                        <eval>date</eval>
+                        <checkbox>1</checkbox>
+                    </config>
+                </TCEforms>
+            </settings.targetdate>
+            <settings.targetdatetime>
+                <TCEforms>
+                    <exclude>1</exclude>
+                    <label>Zieldatum</label>
+                    <displayCond>FIELD:settings.countTo:=:datetime</displayCond>
+                    <config>
+                        <type>input</type>
+                        <size>16</size>
+                        <max>16</max>
+                        <eval>datetime</eval>
+                        <checkbox>1</checkbox>
+                    </config>
+                </TCEforms>
+            </settings.targetdatetime>
+        </el>
+    </ROOT>
+</T3DataStructure>

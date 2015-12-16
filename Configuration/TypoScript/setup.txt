@@ -1,0 +1,39 @@
+plugin.tx_jhecountdownce {
+	view {
+		templateRootPath = {$plugin.tx_jhecountdownce.view.templateRootPath}
+		partialRootPath = {$plugin.tx_jhecountdownce.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_jhecountdownce.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_jhecountdownce.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-jhe-countdownce table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-jhe-countdownce table th {
+		font-weight:bold;
+	}
+
+	.tx-jhe-countdownce table td {
+		vertical-align:top;
+	}
+)

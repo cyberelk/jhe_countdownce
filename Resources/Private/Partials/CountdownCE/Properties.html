@@ -1,0 +1,17 @@
+<f:if condition="{settings.header}">
+	<h3>{settings.header}</h3>
+</f:if>
+
+<f:if condition="{settings.subheader}">
+	<h4>{settings.subheader}</h4>
+</f:if>
+
+<div>
+	<p><f:format.html>{settings.text}</f:format.html></p>
+
+	<f:if condition="{0: settings.countTo} == {0: 'date'}">
+		<f:then><p>Noch {settings.daysToTargetDate} Tage!</p></f:then>
+		<f:else><p>Noch {settings.timeToTargetDate.days} Tage, {settings.timeToTargetDate.hours} Stunden, {settings.timeToTargetDate.minutes} Minuten, {settings.timeToTargetDate.seconds} Sekunden.</p></f:else>
+	</f:if>
+
+</div>
