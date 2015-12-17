@@ -4,6 +4,8 @@
 	* Made the template partial more flexible to make the output easier to
 	  configure via css
 	* Standard css is set up in ts setup.txt
+	* Added jQuery countdown library (http://hilios.github.io/jQuery.countdown/)
+	  to get an animated countdown when selecting a datetime target in the plugin
 
 2015-12-15 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 

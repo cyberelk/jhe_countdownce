@@ -16,6 +16,14 @@
 
 <f:if condition="{0: settings.countTo} == {0: 'date'}">
 	<f:then><div class="countdown">Noch {settings.daysToTargetDate} Tage!</div></f:then>
-	<f:else><div class="countdown">Noch {settings.timeToTargetDate.days} Tage, {settings.timeToTargetDate.hours} Stunden, {settings.timeToTargetDate.minutes} Minuten, {settings.timeToTargetDate.seconds} Sekunden.</div></f:else>
+	<f:else>
+		<div class="countdown"></div>
+		<script>
+			var targetDatetime = moment("{settings.targetDateString}");
+			$('.countdown').countdown(targetDatetime.toDate(), function(event) {
+				$(this).html(event.strftime('Noch %-D Tage, %-H Stunden, %M Minuten, %S Sekunden'));
+			});
+		</script>
+	</f:else>
 </f:if>
 <div class="ce-clearer"></div>

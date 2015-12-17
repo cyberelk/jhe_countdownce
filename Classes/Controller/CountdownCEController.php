@@ -63,15 +63,26 @@ class Tx_JheCountdownce_Controller_CountdownCEController extends Tx_Extbase_MVC_
 			$interval = $todayDate->diff($targetDate);
 			$this->settings['daysToTargetDate'] = $interval->format('%a');
 		} else if($this->settings['countTo'] == 'datetime'){
-			$todayDateTime = new DateTime(date('Y-m-d H:i:s', time()));
-			$targetDateTime = new DateTime(date('Y-m-d H:i:s', $this->settings['targetdatetime']));
-			$interval = $todayDateTime->diff($targetDateTime);
-			$this->settings['timeToTargetDate'] = array(
-				'days' => $interval->format('%a'),
-				'hours' => $interval->format('%h'),
-				'minutes' => $interval->format('%i'),
-				'seconds' => $interval->format('%s')
-			);
+
+			//integrate jquery.countdown module
+			$GLOBALS['TSFE']->additionalHeaderData['tx_jhecountdownce'] = '
+				<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.countdown.min.js"></script>
+				<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/moment-with-locales.js"></script>
+			';
+
+			/*
+			 *  little hack to get around the problem of loosing or adding an hour while changing from or to daylight saving time,
+			 * which is mathematically correct but annoying for humans to read by adding od subtracting one hour
+			 */
+			if(date('c') == date('c', $this->settings['targetdatetime'])){
+				$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime']);
+			} else {
+				if(date('c') < $this->settings['targetdatetime']){
+					$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime'] + 3600);
+				} else if(date('c') > $this->settings['targetdatetime']) {
+					$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime'] - 3600);
+				}
+			}
 		}
 
 		$this->view->assign(settings, $this->settings);
