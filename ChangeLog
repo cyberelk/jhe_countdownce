@@ -1,3 +1,8 @@
+2015-12-21 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
+
+	* Included js lib lodash for frontend templating issues
+	* Included css ans js for making the datetime countdowner flipable
+
 2015-12-17 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 
 	* Added an image field to the flexform to display it in the ce
