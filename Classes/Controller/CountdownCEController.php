@@ -34,23 +34,6 @@
 class Tx_JheCountdownce_Controller_CountdownCEController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * countdownCERepository
-	 *
-	 * @var Tx_JheCountdownce_Domain_Repository_CountdownCERepository
-	 */
-	protected $countdownCERepository;
-
-	/**
-	 * injectCountdownCERepository
-	 *
-	 * @param Tx_JheCountdownce_Domain_Repository_CountdownCERepository $countdownCERepository
-	 * @return void
-	 */
-	public function injectCountdownCERepository(Tx_JheCountdownce_Domain_Repository_CountdownCERepository $countdownCERepository) {
-		$this->countdownCERepository = $countdownCERepository;
-	}
-
-	/**
 	 * action index
 	 *
 	 * @return void
