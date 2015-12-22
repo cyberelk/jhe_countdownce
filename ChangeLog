@@ -1,6 +1,8 @@
 2015-12-22 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 
 	* Deleted unused db files, model, repository and tca settings
+	* Refactoring of html classes and ids
+	* Made labels translationable
 
 2015-12-21 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 

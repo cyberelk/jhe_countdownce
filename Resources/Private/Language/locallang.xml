@@ -7,6 +7,19 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_jhecountdownce_domain_model_countdownce">CountdownCE</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.countdownToDays">Still %s days!</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.days">days</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.hours">hours</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.minutes">minutes</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.seconds">seconds</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_jhecountdownce_domain_model_countdownce">Countdown-Inhaltselement</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.countdownToDays">Noch %s Tage!</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.days">Tage</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.hours">Stunden</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.minutes">Minuten</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.seconds">Sekundens</label>
 		</languageKey>
 	</data>
 </T3locallang>

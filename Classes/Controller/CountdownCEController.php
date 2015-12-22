@@ -47,7 +47,7 @@ class Tx_JheCountdownce_Controller_CountdownCEController extends Tx_Extbase_MVC_
 			$this->settings['daysToTargetDate'] = $interval->format('%a');
 		} else if($this->settings['countTo'] == 'datetime'){
 
-			//integrate jquery.countdown module
+			//integrate jquery.countdown and other necessary modules
 			$GLOBALS['TSFE']->additionalHeaderData['tx_jhecountdownce'] = '
 				<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jquery.countdown.min.js"></script>
 				<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/moment-with-locales.js"></script>

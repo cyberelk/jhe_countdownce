@@ -65,17 +65,17 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		clear: both;
 	}
 
-	.main-example {
+	.main-countdown {
 		margin: 10px 0 0 50px;
 		width: 580px;
 	}
-	.main-example p {
+	.main-countdown p {
 		color: #f1530f;
 	}
-	.main-example .countdown-container {
+	.main-countdown .countdown-container {
 		height: 130px;
 	}
-	.main-example .time {
+	.main-countdown .time {
 		border-radius: 5px;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 		display: inline-block;
@@ -108,7 +108,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		-o-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
-	.main-example .count {
+	.main-countdown .count {
 		background: #202020;
 		color: #f8f8f8;
 		display: block;
@@ -134,7 +134,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		-o-transform-style: flat;
 		transform-style: flat;
 	}
-	.main-example .count.top {
+	.main-countdown .count.top {
 		border-top: 1px solid rgba(255,255,255,0.2);
 		border-bottom: 1px solid rgba(255,255,255,0.1);
 		border-radius: 5px 5px 0 0;
@@ -146,7 +146,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		-o-transform-origin: 50% 100%;
 		transform-origin: 50% 100%;
 	}
-	.main-example .count.bottom {
+	.main-countdown .count.bottom {
 		background-image: linear-gradient(rgba(255,255,255,0.1), transparent);
 		background-image: -webkit-linear-gradient(rgba(255,255,255,0.1), transparent);
 		background-image: -moz-linear-gradient(rgba(255,255,255,0.1), transparent);
@@ -165,9 +165,9 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		-o-transform-origin: 50% 0;
 		transform-origin: 50% 0;
 	}
-	.main-example .count.next {
+	.main-countdown .count.next {
 	}
-	.main-example .label {
+	.main-countdown .label {
 		font-size: x-small;
 		margin-top: 5px;
 		display: block;
@@ -176,7 +176,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		width: 100%;
 	}
 	/* Animation start */
-	.main-example .count.curr.top {
+	.main-countdown .count.curr.top {
 		-webkit-transform: rotateX(0deg);
 		-moz-transform: rotateX(0deg);
 		-ms-transform: rotateX(0deg);
@@ -184,7 +184,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		transform: rotateX(0deg);
 		z-index: 3;
 	}
-	.main-example .count.next.bottom {
+	.main-countdown .count.next.bottom {
 		-webkit-transform: rotateX(90deg);
 		-moz-transform: rotateX(90deg);
 		-ms-transform: rotateX(90deg);
@@ -193,7 +193,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		z-index: 2;
 	}
 	/* Animation end */
-	.main-example .flip .count.curr.top {
+	.main-countdown .flip .count.curr.top {
 		-webkit-transition: all 250ms ease-in-out;
 		-moz-transition: all 250ms ease-in-out;
 		-ms-transition: all 250ms ease-in-out;
@@ -206,7 +206,7 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 		-o-transform: rotateX(-90deg);
 		transform: rotateX(-90deg);
 	}
-	.main-example .flip .count.next.bottom {
+	.main-countdown .flip .count.next.bottom {
 		-webkit-transition: all 250ms ease-in-out 250ms;
 		-moz-transition: all 250ms ease-in-out 250ms;
 		-ms-transition: all 250ms ease-in-out 250ms;
@@ -221,21 +221,21 @@ plugin.tx_jhecountdownce._CSS_DEFAULT_STYLE (
 	}
 
 	@media screen and (max-width: 48em) {
-  .main-example {
+  .main-countdown {
     width: 100%;
   }
-  .main-example .countdown-container {
+  .main-countdown .countdown-container {
     height: 100px;
   }
-  .main-example .time {
+  .main-countdown .time {
       height: 70px;
       width: 48px;
   }
-  .main-example .count {
+  .main-countdown .count {
     font-size: 1.5em;
     line-height: 70px;
   }
-  .main-example .label {
+  .main-countdown .label {
     font-size: 0.8em;
     top: 72px;
   }
