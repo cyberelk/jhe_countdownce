@@ -2,6 +2,8 @@
 
 	* Corrected the link to the locallang files to get the ce working
 	  properly again
+	* Moved the style sheets from ts setup to an own file and integrated
+	  that to the controller
 
 2015-12-22 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 
