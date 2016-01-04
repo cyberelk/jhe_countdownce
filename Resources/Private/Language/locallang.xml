@@ -19,7 +19,7 @@
 			<label index="tx_jhecountdownce_domain_model_countdownce.days">Tage</label>
 			<label index="tx_jhecountdownce_domain_model_countdownce.hours">Stunden</label>
 			<label index="tx_jhecountdownce_domain_model_countdownce.minutes">Minuten</label>
-			<label index="tx_jhecountdownce_domain_model_countdownce.seconds">Sekundens</label>
+			<label index="tx_jhecountdownce_domain_model_countdownce.seconds">Sekunden</label>
 		</languageKey>
 	</data>
 </T3locallang>

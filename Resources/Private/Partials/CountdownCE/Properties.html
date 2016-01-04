@@ -17,7 +17,7 @@
 <f:if condition="{0: settings.countTo} == {0: 'date'}">
 	<f:then>
 		<div class="countdown-container">
-			<f:translate key="LLL:EXT:meineExtension/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.countdownToDays" arguments="{0: '{settings.daysToTargetDate}'}" />
+			<f:translate key="LLL:EXT:jhe_countdownce/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.countdownToDays" arguments="{0: '{settings.daysToTargetDate}'}" />
 		</div>
 	</f:then>
 	<f:else>
@@ -31,17 +31,17 @@
 				<span class="count next top"><%= next %></span>
 				<span class="count next bottom"><%= next %></span>
 				<span class="count curr bottom"><%= curr %></span>
-				<span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+				<span class="label"><%= label.length < 10 ? label : label.substr(0, 3)  %></span>
 			</div>
 		</script>
 
 		<script type="text/javascript">
 			$(window).on('load', function() {
 				var labels = [
-						'<f:translate key="LLL:EXT:meineExtension/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.days" />',
-						'<f:translate key="LLL:EXT:meineExtension/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.hours" />',
-						'<f:translate key="LLL:EXT:meineExtension/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.minutes" />',
-						'<f:translate key="LLL:EXT:meineExtension/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.seconds" />',
+						'<f:translate key="LLL:EXT:jhe_countdownce/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.days" />',
+						'<f:translate key="LLL:EXT:jhe_countdownce/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.hours" />',
+						'<f:translate key="LLL:EXT:jhe_countdownce/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.minutes" />',
+						'<f:translate key="LLL:EXT:jhe_countdownce/Resources/Private/Language/locallang.xml:tx_jhecountdownce_domain_model_countdownce.seconds" />',
 					],
 					targetDateTime = moment("{settings.targetDateString}").toDate(),
 					template = _.template($('#main-countdown-template').html()),
