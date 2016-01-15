@@ -54,21 +54,9 @@ class Tx_JheCountdownce_Controller_CountdownCEController extends Tx_Extbase_MVC_
 				<script type="text/javascript" src="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/lodash.js"></script>
 				<link rel="stylesheet" type="text/css" href="' . t3lib_extMgm::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/Css/jhe_countdownce.css" media="all">
 			';
-
-			/*
-			 *  little hack to get around the problem of loosing or adding an hour while changing from or to daylight saving time,
-			 * which is mathematically correct but annoying for humans to read by adding od subtracting one hour
-			 */
-			if(date('c') == date('c', $this->settings['targetdatetime'])){
-				$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime']);
-			} else {
-				if(date('c') < $this->settings['targetdatetime']){
-					$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime'] + 3600);
-				} else if(date('c') > $this->settings['targetdatetime']) {
-					$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime'] - 3600);
-				}
-			}
 		}
+
+		$this->settings['targetDateString'] = date('c', $this->settings['targetdatetime']);
 
 		$this->view->assign(settings, $this->settings);
 	}

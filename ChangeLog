@@ -1,3 +1,8 @@
+2016-01-15 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.1.0
+
+	* Deleted the date time saving light hack due to calculating problems
+	* Set version number to 0.1.0 for beta release
+
 2016-01-04 Jari-Hermann Ernst, M.A.  <jari-hermann.ernst@bad-gmbh.de> V0.0.0
 
 	* Corrected the link to the locallang files to get the ce working
